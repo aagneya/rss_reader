@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+
+
+{% load staticfiles %} <!-- New line -->
+
+
+
+
+
+{% block jumbotron %}
+
+<style>
+{% block style %}
+.jumbotron {
+     background-color:#6B8E23;
+     color:  	#A9A9A9;
+}
+{% endblock %}
+</style>
+      <div class="jumbotron">
+        <div class = 'row'>
+            <div class = 'col-sm-6'>
+        <h1>RSS READER</h1>
+                <p>RSS READER.</p>
+        <p>
+          <a class="btn btn-lg btn-primary" href="{% url 'registration_register' %}" role="button">join us &raquo;</a>
+        </p>
+       </div>
+     <div class='col-sm-6' style='background-color:black;height:315px'>
+          <img src="{% static "rss.png" %}" alt="Mountain View" style="width:510px;height:300px;">
+          
+     </div>
+         
+          
+     </div>
+</div>
+      </div>
+{% endblock %}
+
+
+     
+<h1>{{title}}</h1>
+
+
+{% block content %}
+
+<a class="btn btn-lg btn-primary" href="/reader/" role="button">reader</a>
+{% endblock %}
+
+
